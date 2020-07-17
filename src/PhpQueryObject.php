@@ -119,8 +119,8 @@ class PhpQueryObject implements \Iterator, \Countable, \ArrayAccess
         $this->charset          = & $this->documentWrapper->charset;
         $this->documentFragment = & $this->documentWrapper->isDocumentFragment;
         // TODO check $this->DOM->documentElement;
-        //		$this->root = $this->document->documentElement;
-        $this->root = & $this->documentWrapper->root;
+        $this->root = $this->document->documentElement;
+        //$this->root = & $this->documentWrapper->root;
         //		$this->toRoot();
         $this->elements = array(
             $this->root
